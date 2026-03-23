@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>com.alican.stringresfinder</id>
+    <id>com.alicankorkmaz.stringresfinder</id>
     <name>String Resource Finder</name>
     <version>1.0.0</version>
     <vendor email="akorkmaz@pm.me" url="https://plugins.jetbrains.com/vendor/alicankorkmaz-sudo">alicankorkmaz-sudo</vendor>
@@ -50,7 +50,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <gotoDeclarationHandler
-            implementation="com.alican.stringresfinder.StringResourceGotoDeclarationHandler"
+            implementation="com.alicankorkmaz.stringresfinder.StringResourceGotoDeclarationHandler"
             order="first"/>
     </extensions>
 </idea-plugin>

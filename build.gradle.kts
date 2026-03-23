@@ -4,7 +4,7 @@ plugins {
     id("org.jetbrains.intellij") version "1.16.1"
 }
 
-group = "com.alican.stringresfinder"
+group = "com.alicankorkmaz.stringresfinder"
 version = "1.0.0"
 
 repositories {

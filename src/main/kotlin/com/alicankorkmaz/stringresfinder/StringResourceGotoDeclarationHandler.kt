@@ -1,4 +1,4 @@
-package com.alican.stringresfinder
+package com.alicankorkmaz.stringresfinder
 
 import com.intellij.codeInsight.navigation.actions.GotoDeclarationHandler
 import com.intellij.openapi.actionSystem.DataContext

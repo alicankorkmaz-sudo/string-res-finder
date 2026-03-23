@@ -1,4 +1,4 @@
-package com.alican.stringresfinder
+package com.alicankorkmaz.stringresfinder
 
 import com.intellij.find.FindModel
 import com.intellij.find.findInProject.FindInProjectManager
