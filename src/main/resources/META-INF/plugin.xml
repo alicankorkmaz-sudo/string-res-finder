@@ -1,0 +1,56 @@
+<idea-plugin>
+    <id>com.alican.stringresfinder</id>
+    <name>String Resource Finder</name>
+    <version>1.0.0</version>
+    <vendor email="akorkmaz@pm.me" url="https://plugins.jetbrains.com/vendor/alicankorkmaz-sudo">alicankorkmaz-sudo</vendor>
+
+    <description><![CDATA[
+    <h2>String Resource Finder</h2>
+
+    <p>Fixes <b>Go to Declaration</b> (Cmd+Click / Ctrl+Click) for Android string resource keys that use
+    <b>dots as separators</b> in <code>strings.xml</code> files.</p>
+
+    <h3>The Problem</h3>
+    <p>In <code>strings.xml</code>, keys use dots:</p>
+    <pre>name="payment_method.add.whitescreen.body"</pre>
+    <p>But in code (Kotlin/Java/XML layouts), they are referenced with underscores:</p>
+    <pre>R.string.payment_method_add_whitescreen_body</pre>
+    <p>So Cmd+Click on a dotted key in <code>strings.xml</code> finds nothing useful.</p>
+
+    <h3>What This Plugin Does</h3>
+    <ul>
+        <li>When you Cmd+Click a string name attribute in <code>strings.xml</code>, it converts dots to underscores</li>
+        <li><b>Single usage found</b> → navigates directly to the usage</li>
+        <li><b>Multiple usages found</b> → opens the <b>Find in Files</b> search overlay with the correct <code>R.string.*</code> reference pre-filled</li>
+        <li><b>No usages found</b> → falls back to default Android Studio behavior</li>
+    </ul>
+
+    <h3>Searches In</h3>
+    <ul>
+        <li>Kotlin and Java files for <code>R.string.&lt;name&gt;</code></li>
+        <li>XML layout/menu files for <code>@string/&lt;name&gt;</code></li>
+    </ul>
+    ]]></description>
+
+    <change-notes><![CDATA[
+    <h3>1.0.0</h3>
+    <ul>
+        <li>Initial release</li>
+        <li>Cmd+Click on dotted string resource names in strings.xml to find usages</li>
+        <li>Dot-to-underscore conversion for R.string and @string references</li>
+        <li>Single result: direct navigation; multiple results: Find in Files overlay</li>
+        <li>Fallback to default Android Studio behavior when no usages are found</li>
+    </ul>
+    ]]></change-notes>
+
+    <idea-version since-build="231" until-build="253.*"/>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.xml</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <gotoDeclarationHandler
+            implementation="com.alican.stringresfinder.StringResourceGotoDeclarationHandler"
+            order="first"/>
+    </extensions>
+</idea-plugin>
