@@ -1,5 +1,7 @@
 # String Resource Finder
 
+[![JetBrains Marketplace](https://img.shields.io/jetbrains/plugin/v/30855-string-resource-finder)](https://plugins.jetbrains.com/plugin/30855-string-resource-finder)
+
 An Android Studio / IntelliJ plugin that fixes **Go to Declaration** (Cmd+Click) for string resource keys that use **dots as separators** in `strings.xml` files.
 
 ## The Problem
@@ -39,7 +41,7 @@ When you **Cmd+Click** (or Ctrl+Click) on a string `name` attribute value in `st
 ### From JetBrains Marketplace
 
 1. Open Android Studio → **Settings** → **Plugins**
-2. Search for **"String Resource Finder"**
+2. Search for **"String Resource Finder"** or install directly from [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/30855-string-resource-finder)
 3. Click **Install** and restart
 
 ### From Disk
